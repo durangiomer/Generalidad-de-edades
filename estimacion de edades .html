@@ -1,0 +1,38 @@
+<meta charset="UTF-8">
+
+<h1> Estimacion general de edades</h1>
+
+<script>
+
+	function saltarlinea() {
+
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+
+	}
+
+	function imprimir(frase) {
+
+		document.write(frase)
+		saltarlinea()
+		}
+
+
+	var numeroMiembros = parseInt(prompt("Por favor ingrese la cantidad de miembros del nucleo familiar"));
+	var contador = 1;
+	var totalEdades = 0;
+
+	while (contador <= numeroMiembros) {
+
+		edad = parseInt(prompt("Por favor ingrese una por una las edades de sus familiares y presione continuar"));
+		totalEdades = totalEdades + edad;
+		contador++;
+	}
+
+	mediaEdades = totalEdades / numeroMiembros;
+	imprimir("La estimacion general de las edades de la familia es " + mediaEdades);
+	imprimir("fin")
+
+
+	</script>
